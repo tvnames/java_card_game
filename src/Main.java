@@ -7,7 +7,7 @@ import java.awt.event.*;
 
 public class Main extends JFrame {
     public static void main(String[] args) {
-        // creates instance of jframe
+        // creates instance of jframe //
         JFrame f = new JFrame();
         // adds a button
         JButton b1 = new JButton("Push me!");
@@ -26,6 +26,16 @@ public class Main extends JFrame {
                 l1.setText(msg);
             }
         });
-        
+        f.add(l1);
+        f.add(b1);
+        f.setSize(400, 400);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+    public static String getMessage() {
+        String str = "";
+        Card c1 = new Card(Ranks.ACE, Suits.DIAMONDS);
+        str += c1.toString();
+        return str;
     }
 }
